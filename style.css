@@ -28,25 +28,58 @@ body {
   background: #f3f4f6;
 }
 
-.priority-label {
+.task-priority {
   margin-left: auto;
-  padding: 4px 8px;
+  padding: 4px 28px 4px 10px;
+  border: none;
   border-radius: 999px;
-  text-transform: capitalize;
   font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  cursor: pointer;
 }
 
-.low .priority-label {
+.low .task-priority {
   background: #dcfce7;
   color: #166534;
 }
 
-.medium .priority-label {
+.medium .task-priority {
   background: #fef3c7;
   color: #92400e;
 }
 
-.high .priority-label {
+.high .task-priority {
   background: #fee2e2;
   color: #991b1b;
+}
+
+.task-priority:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.task-description {
+  flex: 1;
+}
+
+.task-item.completed {
+  background: #e5e7eb;
+  opacity: 0.7;
+}
+
+.task-item.completed .task-description {
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.task-item.completed .task-priority {
+  color: #6b7280;
+}
+
+.task-priority {
+  padding: 6px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  background: white;
 }
